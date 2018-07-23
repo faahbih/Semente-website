@@ -251,7 +251,7 @@ html, body {
 }
 
 .mdl-demo main > .mdl-layout__tab-panel {
-    padding: 80px;
+    padding: 30px;
     padding-top: 48px;
 }
 .mdl-demo .mdl-layout__header-row {
@@ -261,4 +261,8 @@ html, body {
 .mdl-button .material-icons {
   vertical-align: middle;
   color: rgb(255,64,129);
+}
+
+.demo-list-action {
+  width: 100%;
 }
