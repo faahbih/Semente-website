@@ -49,7 +49,8 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-pink.min.css">
+  <!-- <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-pink.min.css"> -->
+  <link rel="stylesheet" href="./mdl/material.min.css">
   <link rel="stylesheet" href="styles.css">
   <style>
     #view-source {
@@ -68,9 +69,7 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
       <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-      </div>
-      <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        <h3>Livro Semente</h3>
+        <h3 class="oculta">Livro Semente</h3>
         <br>
         <br>
       </div>
@@ -79,8 +78,11 @@
       <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
         <a href="#overview" class="mdl-layout__tab is-active">Visão Geral</a>
         <a href="#features" class="mdl-layout__tab">Sobre o autor</a>
-        <!-- <a href="#features" class="mdl-layout__tab">Details</a>
-          <a href="#features" class="mdl-layout__tab">Technology</a>
+        <a href="#features" class="mdl-layout__tab">Sobre o autor</a>
+        <a href="#dicas" class="mdl-layout__tab">
+          <div class="material-icons mdl-badge mdl-badge--overlap mt-2" id="dicas_1" data-badge="2">video_library</div>
+        </a>
+        <!-- <a href="#features" class="mdl-layout__tab">Technology</a>
           <a href="#features" class="mdl-layout__tab">FAQ</a> -->
         <!-- <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
             <i class="material-icons" role="presentation">add</i>
@@ -156,9 +158,12 @@
             <div class="mdl-card__supporting-text">
               <h4>Sinopse</h4>
 
-              Inconformado com a maldade e sofrimento humano, e vendo tantos desprovidos do real desejo de Deus para a humanidade, o autor
-              transcreve para o livro apenas alguns importantes versículos da Bíblia (na sua visão). Para o autor, o conhecimento
-              e vivência destes versículos promovem uma vida feliz, em paz e em sintonia com Deus e com a bela natureza que
+              Inconformado com a maldade e sofrimento humano, e vendo tantos desprovidos do real desejo de Deus para a
+              humanidade, o autor
+              transcreve para o livro apenas alguns importantes versículos da Bíblia (na sua visão). Para o autor, o
+              conhecimento
+              e vivência destes versículos promovem uma vida feliz, em paz e em sintonia com Deus e com a bela natureza
+              que
               Ele criou para dela usufruirmos com todo respeito e sabedoria
 
               <!-- List items with avatar and action -->
@@ -169,15 +174,15 @@
               </style>
 
               <div class="demo-list-action mdl-list">
-                  <div class="mdl-list__item">
-                      <span class="mdl-list__item-primary-content">
-                        <span>Prefácio</span>
-                      </span>
-                      <a class="mdl-list__item-secondary-action mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect"
-                        href="pdfs/Prefácio.pdf" download>
-                        <i class="material-icons">arrow_downward</i>
-                      </a>
-                    </div>
+                <div class="mdl-list__item">
+                  <span class="mdl-list__item-primary-content">
+                    <span>Prefácio</span>
+                  </span>
+                  <a class="mdl-list__item-secondary-action mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect"
+                    href="pdfs/Prefácio.pdf" download>
+                    <i class="material-icons">arrow_downward</i>
+                  </a>
+                </div>
                 <div class="mdl-list__item">
                   <span class="mdl-list__item-primary-content">
                     <span>Capítulo 1 - Introdução</span>
@@ -296,14 +301,14 @@
                   </span>
                 </div>
                 <div class="mdl-list__item">
-                    <span class="mdl-list__item-primary-content">
-                      <span>O autor</span>
-                    </span>
-                    <a class="mdl-list__item-secondary-action mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect"
-                      href="pdfs/O autor.pdf" download>
-                      <i class="material-icons">arrow_downward</i>
-                    </a>
-                  </div>
+                  <span class="mdl-list__item-primary-content">
+                    <span>O autor</span>
+                  </span>
+                  <a class="mdl-list__item-secondary-action mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect"
+                    href="pdfs/O autor.pdf" download>
+                    <i class="material-icons">arrow_downward</i>
+                  </a>
+                </div>
               </div>
             </div>
             <!-- <div class="mdl-card__actions">
@@ -321,7 +326,6 @@
             <li class="mdl-menu__item">Dolor</li>
           </ul>
         </section>
-
         <!-- <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
           <div class="mdl-card mdl-cell mdl-cell--12-col">
             <div class="mdl-card__supporting-text">
@@ -358,18 +362,25 @@
           <div class="mdl-cell mdl-cell--12-col">
             <h4>Sobre o autor</h4>
 
-            <p>O autor Antonio de Mattos Guerra, 66 anos, natural de Natividade da Serra, Estado de São Paulo, reside em São José dos Campos
-            há mais de 50 anos. É casado com Sra. Marli há 43 anos e tem três maravilhosos filhos: Robson, Thelma e Leonardo,
-            e também Patrícia (nora), Rafael e Felipe (netos), Fábio Vinícius (genro), Matheus e Lucas (netos) e Juliana
-            (nora).</p><br>
-            
-            <p>Participa da comunidade da Paróquia de Santo Agostinho da diocese de São José dos Campos-SP, onde colabora
-            no Ministério Extraordinário da Comunhão. Juntamente com Marli, foram agentes da pastoral familiar por mais de
-            vinte anos, onde assumiram algumas coordenações.</p><br>
-            
-            <p>Concluiu o curso de Teologia para Leigos em 2011 e do Catecismo
-            da Igreja Católica em 2012, que lhe deu grande suporte nos trabalhos pastorais e na revisão deste livro...</p>
-        
+            <p>O autor Antonio de Mattos Guerra, 66 anos, natural de Natividade da Serra, Estado de São Paulo, reside
+              em
+              São José dos Campos há mais de 50 anos. É casado com Sra. Marli há 43 anos e tem três maravilhosos
+              filhos:
+              Robson, Thelma e Leonardo, e também Patrícia (nora), Rafael e Felipe (netos), Fábio Vinícius (genro),
+              Matheus
+              e Lucas (netos) e Juliana (nora).
+            </p><br>
+
+            <p>Participa da comunidade da Paróquia de Santo Agostinho da diocese de São José dos Campos-SP, onde
+              colabora
+              no Ministério Extraordinário da Comunhão. Juntamente com Marli, foram agentes da pastoral familiar por
+              mais
+              de vinte anos, onde assumiram algumas coordenações.</p><br>
+
+            <p>Concluiu o curso de Teologia para Leigos em 2011 e do Catecismo da Igreja Católica em 2012, que lhe deu
+              grande
+              suporte nos trabalhos pastorais e na revisão deste livro...</p>
+
             <ul class="toc">
               <h4>Descrição completa</h4>
               <a href="pdfs/O autor.pdf" target="_blank">O Autor</a>
@@ -453,6 +464,25 @@
           </div>
         </section>
       </div>
+
+      <div class="mdl-layout__tab-panel" id="dicas">
+        <section class="section--center mdl-grid mdl-grid--no-spacing">
+          <div class="mdl-cell mdl-cell--12-col">
+
+            <h4>Dicas</h4>
+
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/qkswz_kAxTI" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+
+            <br><br>
+
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/MZbOXFQ0jHM" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+
+          </div>
+        </section>
+      </div>
+
       <footer class="mdl-mega-footer">
         <!-- <div class="mdl-mega-footer--middle-section">
             <div class="mdl-mega-footer--drop-down-section">
@@ -511,7 +541,8 @@
     </main>
   </div>
   <!-- <a href="https://github.com/google/material-design-lite/blob/mdl-1.x/templates/text-only/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a> -->
-  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <!-- <script src="https://code.getmdl.io/1.3.0/material.min.js"></script> -->
+  <script src="./mdl/material.min.js"></script>
 </body>
 
 </html>
